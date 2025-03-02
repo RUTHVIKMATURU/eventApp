@@ -1,0 +1,55 @@
+###Get user By ID
+GET http://localhost:5000/user-api/user/matururuthvik@gmail.com
+
+
+### create user 
+POST http://localhost:5000/user-api/user 
+Content-Type:application/json
+
+{
+    "role":"eventmanager",
+    "firstName":"ruthvik",
+    "lastName":"maturu",
+    "email":"matururuthvik@gmail.com",
+    "profileImageUrl":"ruthvik"
+}
+
+
+### Get Events
+GET http://localhost:5000/event-api/events
+
+### Create Event
+
+POST http://localhost:5000/event-api/addevent/ruthvik0811@gmail.com
+Content-Type: application/json
+
+{
+    "title": "Convergence",
+    "date": "2025-05-20T10:00:00.000Z",
+    "time": "12:00 PM",
+    "duration": "4 hrs",
+    "location": "VNRVJIET",
+    "description": "A technical fest in Hyderabad"
+}
+
+### Update Event
+PUT http://localhost:5000/event-api/67c304653b92b5dad2dc02f7
+Content-Type: application/json
+
+{
+    "title":"convergence-2k25",
+    "date": "2025-05-25T10:00:00.000Z",
+    "time": "10:00 AM",
+    "duration": "4 hrs",
+    "location": "VNRVJIET",
+    "description": "A technical fest in Hyderabad"
+}
+
+
+### Delete Event
+DELETE  http://localhost:5000/event-api/67c304653b92b5dad2dc02f7
+
+
+
+
+
