@@ -12,6 +12,7 @@ import Signup from "./components/Signup.jsx";
 import EventById from "./components/EventById.jsx";
 import AddEvents from "./components/AddEvents.jsx";
 import UpdateEvents from "./components/UpdateEvents.jsx";
+import ErrorPage from "./ErrorPage.jsx";
 // Define Routes
 const browserRouterObj = createBrowserRouter([
   {
@@ -45,8 +46,13 @@ const browserRouterObj = createBrowserRouter([
       { 
         path: "/signup", 
         element: <Signup /> 
-      }
+      },
+      
     ]
+  },
+  {
+      path:"*",
+      element:<ErrorPage/>
   }
 ]);
 
