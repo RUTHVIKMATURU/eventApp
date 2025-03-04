@@ -17,6 +17,7 @@ function UpdateEvents() {
       setValue("time", eventData.time || "");
       setValue("duration", eventData.duration || "");
       setValue("location", eventData.location || "");
+      setValue("description", eventData.description || "");
     }
   }, [eventData, setValue]);
 
@@ -35,47 +36,32 @@ function UpdateEvents() {
       <form onSubmit={handleSubmit(onSubmit)} className="mt-4">
         <div className="mb-3">
           <label className="form-label">Event Title</label>
-          <input
-            type="text"
-            className="form-control"
-            {...register("title", { required: true })}
-          />
+          <input type="text" className="form-control" {...register("title", { required: true })} />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Date</label>
-          <input
-            type="date"
-            className="form-control"
-            {...register("date", { required: true })}
-          />
+          <input type="date" className="form-control" {...register("date", { required: true })} />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Time</label>
-          <input
-            type="time"
-            className="form-control"
-            {...register("time", { required: true })}
-          />
+          <input type="time" className="form-control" {...register("time", { required: true })} />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Duration</label>
-          <input
-            type="text"
-            className="form-control"
-            {...register("duration", { required: true })}
-          />
+          <input type="text" className="form-control" {...register("duration", { required: true })} />
         </div>
 
         <div className="mb-3">
           <label className="form-label">Location</label>
-          <input
-            type="text"
-            className="form-control"
-            {...register("location", { required: true })}
-          />
+          <input type="text" className="form-control" {...register("location", { required: true })} />
+        </div>
+
+        <div className="mb-3">
+          <label className="form-label">Description</label>
+          <textarea className="form-control" rows="3" {...register("description", { required: true })}></textarea>
         </div>
 
         <div className="d-flex justify-content-between">

@@ -46,7 +46,7 @@ function Home() {
       }
     } catch (err) {
       console.error("Error adding user:", err);
-      setError("Failed to add user. Please try again.");
+      setError("Invalid Role");
     }
   }
   return (
