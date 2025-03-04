@@ -46,8 +46,7 @@ function ViewEvents() {
         const filtered = allEvents.filter(event =>
           event.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           event.location.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          event.date.includes(searchTerm) ||
-          (event.description && event.description.toLowerCase().includes(searchTerm.toLowerCase()))
+          event.date.includes(searchTerm)
         );
         setEvents(filtered);
       }
@@ -83,7 +82,7 @@ function ViewEvents() {
         <input
           type="text"
           className="form-control w-50"
-          placeholder="Search by title, location, or date..."
+          placeholder="Search"
           onChange={(e) => setSearchTerm(e.target.value)}
           value={searchTerm}
         />
